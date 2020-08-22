@@ -43,45 +43,50 @@
       </section>
     </header>
     <main class="container">
-        
+      <form>
+        <!-- Area input -->
         <div class="form-group my-5">
-            <label for="area-input">Quelle est la surface de votre projet (m²) ?</label>
-            <input type="number" class="form-control" id="area-input" placeholder="surface en m²">
-          </div>
-          <div class="form-group my-4">
-            <label for="bedroom-select">Combien aurez-vous de chambres ?</label>
-            <select class="form-control" id="bedroom-select">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </select>
-          </div>
-          <label class="radio-inline control-label mr-3">Le matériau choisi :</label>
-          <div class="form-check form-check-inline my-4">
-              <input class="form-check-input" type="radio" name="material-radio" id="material-radio1" value="option1">
-              <label class="form-check-label" for="material-radio1">parpaing</label>
-          </div>
-          <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="material-radio" id="material-radio2" value="option2">
-              <label class="form-check-label" for="material-radio2">bois</label>
-          </div>
-          <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="material-radio" id="material-radio3" value="option3">
-              <label class="form-check-label" for="material-radio3">brique</label>
-          </div>
-      </form>
-        <div class="calculation  my-4">
-          <button type="button" class="btn btn-primary btn-lg mr-4" id="estimate-button">Estimer</button>
-          <span id="estimate-span" class="text-warning">dfdfd</span>
+          <label for="area-input">Quelle est la surface de votre projet (m²) ?</label>
+          <input type="number" class="form-control" id="area-input" value="1">
         </div>
-
+        <!-- Bedroom select -->
+        <div class="form-group my-4">
+          <label for="bedroom-select">Combien aurez-vous de chambres ?</label>
+          <select class="form-control" id="bedroom-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+        </div>
+        <!-- Material radio-buttons -->
+        <label class="radio-inline control-label mr-3">Le matériau choisi :</label>
+        <div class="form-check form-check-inline my-4">
+            <input class="form-check-input" type="radio" name="material-radio" id="material-radio1" value="parpaing" checked>
+            <label class="form-check-label" for="material-radio1">parpaing</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="material-radio" id="material-radio2" value="bois">
+            <label class="form-check-label" for="material-radio2">bois</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="material-radio" id="material-radio3" value="brique">
+            <label class="form-check-label" for="material-radio3">brique</label>
+        </div>
+      </form>
+      <!-- Estimation div -->
+      <div class="calculation  my-4">
+        <button type="button" class="btn btn-primary btn-lg mr-4" id="estimate-button">Estimer</button>
+        <span id="estimate-span" style="opacity: 0; transition: opacity 0.5s linear">Le budget estimé de votre projet est de : 
+          <strong class="text-primary ml-2" style="font-size: 1px; transition: font-size 0.3s linear;"></strong>
+        </span>
+      </div>
     </main>
     <footer class="jumbotron jumbotron-fluid mt-5 mb-0">
       <section class="container">
