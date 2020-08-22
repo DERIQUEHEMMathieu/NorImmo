@@ -47,7 +47,7 @@
         <!-- Area input -->
         <div class="form-group my-5">
           <label for="area-input">Quelle est la surface de votre projet (m²) ?</label>
-          <input type="number" class="form-control" id="area-input" placeholder="surface en m²">
+          <input type="number" class="form-control" id="area-input" value="1">
         </div>
         <!-- Bedroom select -->
         <div class="form-group my-4">
@@ -83,7 +83,9 @@
       <!-- Estimation div -->
       <div class="calculation  my-4">
         <button type="button" class="btn btn-primary btn-lg mr-4" id="estimate-button">Estimer</button>
-        <span id="estimate-span" class="d-none">Le budget estimé de votre projet est de : <strong class="text-primary ml-2"></strong></span>
+        <span id="estimate-span" style="opacity: 0; transition: opacity 0.5s linear">Le budget estimé de votre projet est de : 
+          <strong class="text-primary ml-2" style="font-size: 1px; transition: font-size 0.3s linear;"></strong>
+        </span>
       </div>
     </main>
     <footer class="jumbotron jumbotron-fluid mt-5 mb-0">
