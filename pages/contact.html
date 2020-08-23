@@ -42,25 +42,25 @@
         <p class="text-center">Leader de la construction et de la rénovation de maisons individuelles en Normandie.</p>
       </section>
     </header>
-    <main class="container">
 
-      <form class="needs-validation" novalidate>
+    <main class="container">
+      <form class="needs-validation" novalidate method="POST">
         <div class="form-row">
           <div class="col-md-3 mb-3">
-            <label for="lastname" class="font-weight-bold" id="name">Nom :</label>
-            <input type="text" class="form-control" id="lastname" placeholder="Votre nom" required>
+            <label for="exampleFormControlInput1" class="font-weight-bold">Nom :</label>
+            <input type="Nom" class="form-control" id="lastnameInput" placeholder="Votre nom" required minlength="2" maxlength="50">
           </div>
           <div class="col-md-3 mb-3">
-            <label for="firstname" class="font-weight-bold" id="name">Prénom :</label>
-            <input type="text" class="form-control" id="firstname" placeholder="Votre prénom" required>
+            <label for="exampleFormControlInput1" class="font-weight-bold">Prénom :</label>
+            <input type="Prénom" class="form-control" id="firstnameInput" placeholder="Votre prénom" required minlength="2" maxlength="50">
           </div>
           <div class="col-md-3 mb-3">
-            <label for="number" class="font-weight-bold" id="number">Téléphone :</label>
-              <input type="tel" class="form-control" id="number" placeholder="Votre téléphone" required>
+            <label for="exampleFormControlInput1" class="font-weight-bold">Téléphone :</label>
+              <input type="tel" class="form-control" id="phoneNumberInput" placeholder="Format : 0612345678" required pattern="[0-9]{10}" required minlength="10" maxlength="10" size="10">
           </div>
           <div class="form-group col-md-2">
-            <label for="motif" class="font-weight-bold">Motif du message :</label>
-            <select id="motif" class="form-control">
+            <label for="motifInput" class="font-weight-bold">Motif du message :</label>
+            <select id="subjectInput" class="form-control" required>
               <option selected>Devis</option>
               <option>Information</option>
               <option>Réclamation</option>
@@ -68,15 +68,16 @@
           </div>
           <div class="col-12 col-md-6 col-lg-6 offset-lg-3">
           <div class="form-group">
-            <label for="messageArea" class="font-weight-bold">Message :</label>
-            <textarea class="form-control rounded-0" id="messageArea" rows="10" placeholder="Votre message"></textarea>
+            <label for="exampleFormControlTextarea1" class="font-weight-bold">Message :</label>
+            <textarea class="form-control rounded-0" id="userMessage" rows="10" placeholder="Votre message" required></textarea>
+            <p id="maxCharactersLeft"></p>
           </div>
           </div>
         </div>
-        <button class="btn btn-primary col-12 col-md-6 col-lg-6 offset-lg-3" onclick="validateForm()">Envoi</button>
       </form>
-
+      <button class="btn btn-primary col-12 col-md-6 col-lg-6 offset-lg-3" id="submit" onclick="submit()">Envoi</button>
     </main>
+
     <footer class="jumbotron jumbotron-fluid mt-5 mb-0">
       <section class="container">
         <h5>Tout droits reservés</h5>
